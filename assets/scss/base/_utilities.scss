@@ -1,0 +1,37 @@
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
+    &.stack {
+        flex-direction: column;
+    }
+    &.center {
+        align-items: center;
+        justify-content: center;
+    }
+    &.justify-between {
+        justify-content: space-between;
+    }
+    .wrap {
+        flex-wrap: wrap;
+    }
+}
+.my-auto {
+    margin-block: auto;
+}
+.mt-auto {
+    margin-top: auto;
+}
+.mb-auto {
+    margin-bottom: auto;
+}
+.decoration-none {
+    text-decoration: none !important;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.mobile-hidden{
+    @media (max-width: map-get($breakpoints, 'medium')) {
+        display: none!important;
+    }
+}

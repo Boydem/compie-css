@@ -1,0 +1,14 @@
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .view {
+    flex: 1;
+  }
+}
+
+.container {
+  padding-inline: var(--layout-padding);
+  transition: 0.3s;
+}

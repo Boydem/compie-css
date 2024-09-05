@@ -1,0 +1,90 @@
+[data-tooltip] {
+  position: relative; /* Ensure that the tooltip can be positioned relative to the element */
+  cursor: pointer;
+
+  /* Arrow styling */
+  &::before {
+    content: '';
+    position: absolute;
+    border-width: 6px; /* Adjust this for the size of the arrow */
+    border-style: solid;
+    border-color: $c--text transparent transparent transparent; /* Creates an arrow pointing upwards */
+    top: -0.5rem; /* Position above the tooltip */
+    left: 50%;
+    transform: translate(-50%, -1px);
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none; /* Prevents interaction with the arrow */
+  }
+
+  &::after {
+    z-index: 11;
+    content: attr(data-tooltip); /* Use the attribute's value as the content */
+    position: absolute;
+    left: 50%;
+    background-color: $c--text;
+    color: $c--base;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    font-weight: 300;
+    font-size: 0.85rem;
+    transform: translate(-50%, -100%);
+    top: -0.5rem;
+  }
+
+  &[data-tooltip-pos="bot"] {
+    &::before {
+      top: auto;
+      bottom: -0.5rem; /* Position arrow below the tooltip */
+      left: 50%;
+      transform: translate(-50%, 1px);
+      border-color: transparent transparent $c--text transparent; /* Flip the arrow to point downward */
+    }
+    &::after {
+      top: auto;
+      bottom: -.5rem;
+      transform: translate(-50%, 100%);
+    }
+  }
+
+
+  &[data-tooltip-pos="right"] {
+    &::before {
+      top: 50%;
+      left: auto;
+      right: -.5rem;
+      transform: translateY(-50%);
+      border-color: transparent $c--text transparent transparent; /* Arrow pointing left */
+    }
+    &::after {
+      top: 50%;
+      left: 100%;
+      transform: translate(0.5rem, -50%);
+    }
+  }
+
+  &[data-tooltip-pos="left"] {
+    &::before {
+      top: 50%;
+      left: -.5rem;
+      transform: translateY(-50%);
+      border-color: transparent transparent transparent $c--text; /* Arrow pointing right */
+    }
+    &::after {
+      top: 50%;
+      left: auto;
+      right: calc(100% + 0.5rem);
+      transform: translate(0, -50%);
+    }
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1; /* Show both the tooltip and the arrow on hover */
+  }
+
+}

@@ -1,0 +1,12 @@
+.loader {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid $c--muted;
+  border-top-color: transparent;
+  border-radius: 50%;
+  opacity: 1;
+  transition: 0.25s;
+  animation: spin 1s linear infinite;
+  pointer-events: none;
+}

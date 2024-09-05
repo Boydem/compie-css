@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/2af272f0cc.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ixz7pas.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script type="text/javascript" src="https://kit.fontawesome.com/2af272f0cc.js"></script>
+    <title>CSS Playground</title>
+</head>
+<body>
+
+<main id="app">
+    <header class="site-header container">
+        <img src="../assets/images/compie.svg" alt="logo" class="logo">
+        <input type="checkbox" name="isMobileNavOpen" id="isMobileNavOpen" hidden/>
+        <label for="isMobileNavOpen"><i class="fa-regular fa-bars"></i><i class="fa-regular fa-close"></i></label>
+        <nav class="site-nav">
+            <div class="menu">
+                <a href="../index.html">Home</a>
+                <a href="../examples/positioning.html">Positioning</a>
+                <a href="../examples/flex.html">Flex</a>
+                <a href="../examples/grid.html">Grid</a>
+                <a href="../examples/positioning.html">Tricks</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="view">
+        <div class="positioning container">
+            <h1>Positioning</h1>
+            <div class="examples">
+                <section class="example sticky">
+                    <div class="wrapper">
+                        <div class="sidebar">
+                            <h5>Example</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">Link 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Link 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Link 3</a>
+                                </li>
+                                <li>
+                                    <a href="#">Link 4</a>
+                                </li>
+                                <li>
+                                    <a href="#">Link 5</a>
+                                </li>
+                                <li>
+                                    <a href="#">Link 6</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <h5>position: sticky;</h5>
+                            <p>keeps an element in a fixed position within its container when scrolling past a specified
+                                threshold,
+                                but
+                                allows it to move with the scroll until that threshold is reached.</p>
+                            <small>Mostly used in : Sidebar, Header</small>
+                            <pre><code>
+&lt;!-- HTML --&gt;
+&lt;section class="sticky-parent"&gt;
+    &lt;div class="wrapper"&gt;
+        &lt;div class="sidebar"&gt;
+            &lt;h5&gt;Sidebar&lt;/h5&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;Link 6&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="content"&gt;
+          ... Not sticky content ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- CSS --&gt;
+.sticky {
+  .wrapper {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 1rem; /* Adjust this value based on your header height or desired offset */
+    flex: 0 0 300px; /* Flex-basis for the sidebar width */
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+                </code></pre>
+                        </div>
+                    </div>
+                </section>
+                <section class="example">
+                    <div class="wrapper">
+                        <div class="sidebar">
+                            <h5>Example</h5>
+                            <ul>
+                                <li>
+                                    <button class="primary" data-open-popup>Example #1</button>
+                                </li>
+                                <li>
+                                    <button class="primary" data-open-toaster>Example #2</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <h5>position: fixed;</h5>
+                            <p>positions an element relative to the viewport, keeping it in place even when the page is
+                                scrolled.</p>
+                            <small>Mostly used in : Modals</small>
+                            <pre><code>
+&lt;!-- HTML --&gt;
+&lt;div class="popup"&gt;
+    &lt;div class="content"&gt;
+        Hello World
+    &lt;div class="content"&gt;
+&lt;/div&gt;
+
+&lt;div class="toaster"&gt;
+    Hello World
+&lt;/div&gt;
+
+&lt;!-- CSS --&gt;
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.toaster {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+                </code></pre>
+                        </div>
+                    </div>
+                </section>
+                <section class="example">
+                    <div class="wrapper">
+                        <div class="sidebar">
+                            <h5>Example</h5>
+                            <ul>
+                                <li>
+                                    <button class="primary" data-tooltip="Top opening" data-tooltip-pos="top">Example #1</button>
+                                </li>
+                                <li>
+                                    <button class="primary" data-tooltip="Bottom opening" data-tooltip-pos="bot">Example #2</button>
+                                </li>
+                                <li>
+                                    <button class="primary" data-tooltip="Right opening" data-tooltip-pos="right">Example #3</button>
+                                </li>
+                                <li>
+                                    <button class="primary" data-tooltip="Left opening" data-tooltip-pos="left">Example #4</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <h5>position: absolute;</h5>
+                            <p>positions an element relative to its nearest positioned ancestor, or the initial
+                                containing block if none exists, removing it from the normal document flow.</p>
+                            <small>Mostly used in : Inner component</small>
+                            <pre><code>
+&lt;!-- HTML --&gt;
+&lt;button data-tooltip="Top opening" data-tooltip-pos="top"&gt;
+    Example #1
+&lt;/button&gt;
+&lt;button data-tooltip="Bottom opening" data-tooltip-pos="bot"&gt;
+    Example #2
+&lt;/button&gt;
+&lt;button data-tooltip="Right opening" data-tooltip-pos="right"&gt;
+    Example #3
+&lt;/button&gt;
+&lt;button data-tooltip="Left opening" data-tooltip-pos="left"&gt;
+    Example #4
+&lt;/button&gt;
+
+&lt;!-- CSS --&gt;
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    background-color: #333;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    font-weight: 300;
+    font-size: 0.85rem;
+    transform: translate(-50%, -100%);
+    top: -0.5rem;
+  }
+
+  &[data-tooltip-pos="bot"] {
+    &::after {
+      top: auto;
+      bottom: -0.5rem;
+      transform: translate(-50%, 100%);
+    }
+  }
+
+  &[data-tooltip-pos="right"] {
+    &::after {
+      top: 50%;
+      left: 100%;
+      transform: translate(0.5rem, -50%);
+    }
+  }
+
+  &[data-tooltip-pos="left"] {
+    &::after {
+      top: 50%;
+      left: auto;
+      right: 100%;
+      transform: translate(-0.5rem, -50%);
+    }
+  }
+
+  &[data-tooltip-pos="top"] {
+    &::after {
+      top: -0.5rem;
+      bottom: auto;
+      transform: translate(-50%, -100%);
+    }
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+            </code></pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="popup">
+    <div class="content">
+        <h6>Hello world</h6>
+        <p>Please confirm that this is fixed</p>
+        <div class="buttons">
+            <button class="outline" data-close-popup>No</button>
+            <button class="primary" data-close-popup>Yes</button>
+        </div>
+    </div>
+</div>
+<div class="toaster">
+    <i class="fa-regular fa-check"></i>
+    Hello world
+</div>
+<script src="../assets/js/header.js"></script>
+<script src="../assets/js/modals.js"></script>
+</body>
+</html>
