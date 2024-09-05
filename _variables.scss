@@ -1,0 +1,47 @@
+$breakpoints: (
+        "small": 640px,
+        "medium": 1020px,
+        "large": 1440px,
+);
+
+//Layout Padding
+$layout-padding-xl: 10rem;
+$layout-padding-l: 6.5rem;
+$layout-padding-m: 3rem;
+$layout-padding-s: 1.5rem;
+
+// Font sizes
+$font-size-base: 16px;
+$font-size-ratio: 1.4;
+
+// Colors
+$c--base: #FBFDFF;
+$c--text: #0C1937;
+$c--text-rgb: rgb(15, 25, 55);
+$c--muted: #73858E;
+$c--primary: #00154A;
+$c--secondary: #759CB2;
+$c--accent: #69D1FF;
+$c--border: #C4CDD1;
+$c--disabled: #C4CDD1;
+$c--highlighted: #F3FCFF;
+$c--success: #5cb85c;
+
+
+// Font Sizes
+$font-size--12: 0.75rem; // 12px
+$font-size--14: 0.875rem; // 14px
+$font-size--18: 1.125rem; // 18px
+$font-size--20: 1.25rem; // 20px
+$font-size--24: 1.5rem; // 24px
+$font-size--32: 2rem; // 32px
+$font-size--40: 2.5rem; // 40px
+$font-size--48: 3rem; // 48px
+$font-size--56: 3.5rem; // 56px
+$font-size--100: 6.25rem; // 110px
+$font-size--144: 9rem; // 144px
+
+// Font Family
+$font-circular: Circular, sans-serif;
+$font-larken: "larken", sans-serif;
+

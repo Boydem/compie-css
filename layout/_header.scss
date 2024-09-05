@@ -1,0 +1,184 @@
+header.site-header {
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $c--base;
+  position: sticky;
+  top: var(--wp-admin--admin-bar--height, 0px);
+  width: 100%;
+  z-index: 999;
+  transition: 0.4s;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+  &.scrolled {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+
+  }
+
+  .user {
+    cursor: pointer;
+    font-weight: 600;
+    //padding-inline-start: 2rem;
+    border-inline-start: 1px solid $c--border;
+    padding-block: 0;
+    border-radius: 0;
+    padding-inline: 2rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+
+    .dropdown {
+      position: absolute;
+      bottom: -.5rem;
+      left: 0;
+      width: 100%;
+      transform: translateY(90%);
+      overflow: hidden;
+      box-shadow: 0px 3px 10px -3px rgba($c--text-rgb, 0.5);
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: 0.3s;
+
+      &.shown {
+        transform: translateY(100%);
+        pointer-events: all;
+        opacity: 1;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        padding: 0.75rem 1.25rem;
+        color: $c--text;
+        background: $c--base;
+        transition: 0.3s;
+
+        &:hover {
+          color: $c--muted;
+        }
+      }
+
+    }
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: 0.4s;
+
+    .mobile-nav-logout{
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    a {
+      color: $c--secondary;
+      font-weight: 600;
+    }
+
+    .current-menu-item a {
+      color: $c--text;
+    }
+
+
+  }
+
+  input[name="isMobileNavOpen"]:checked + label[for="isMobileNavOpen"] {
+    .fa-bars {
+      opacity: 0;
+    }
+
+    .fa-close {
+      opacity: 1;
+    }
+  }
+
+  label[for="isMobileNavOpen"] {
+    z-index: 1;
+    font-size: 1.25rem;
+    position: relative;
+    width: 1.25rem;
+    display: none;
+
+    i {
+      transition: 0.3s;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .fa-close {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, 'medium')) {
+    label[for="isMobileNavOpen"] {
+      display: block;
+    }
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: $c--base;
+      flex-direction: column;
+      gap: 0;
+      padding-top: var(--header-height);
+
+
+      .menu-header-container {
+        width: 100%;
+        border-bottom: 1px solid $c--border;
+        margin-bottom: 1rem;
+      }
+
+      .menu {
+        padding: 1rem;
+        flex-direction: column;
+        width: 100%;
+
+        li, a {
+          font-size: 1rem;
+          width: 100%;
+          text-align: start;
+        }
+      }
+
+      button[data-open-login].primary , .mobile-nav-logout {
+        display: flex;
+        align-self: flex-start;
+        background-color: transparent;
+        color: $c--text;
+        padding-inline: 1rem;
+        font-size: $font-size--18;
+      }
+
+      .user {
+        display: none;
+      }
+
+    }
+    input[name="isMobileNavOpen"]:checked ~ .site-nav {
+      left: 0;
+    }
+  }
+}

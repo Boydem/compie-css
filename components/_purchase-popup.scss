@@ -1,0 +1,188 @@
+.purchase-popup {
+  max-width: 460px;
+  width: calc(100% - 2rem);
+  pointer-events: none;
+
+  .header {
+    background-color: $c--text;
+    padding: 1.5rem 2rem;
+    color: $c--base;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+
+    .dots-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    h6 {
+      line-height: 1;
+    }
+
+    .close-btn {
+      z-index: 1;
+      padding: 0;
+    }
+  }
+
+  .steps-slider {
+    background-color: $c--base;
+    overflow-x: hidden;
+    padding: 1.5rem 2rem;
+    width: 100%;
+
+    @media (max-width: map-get($breakpoints, 'small')) {
+      padding: 1.5rem 1rem;
+    }
+
+    .track {
+      $gap: 4rem;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: $gap;
+      position: relative;
+      transition: 0.3s;
+      left: 0;
+
+      > * {
+        flex: 1 0 100%;
+      }
+
+      &[data-step="1"] {
+        left: 0;
+      }
+
+      &[data-step="2"] {
+        left: calc(-100% - $gap);
+      }
+
+      &[data-step="3"] {
+        left: calc(-200% - ($gap * 2));
+      }
+    }
+
+    .success {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: .5rem;
+      color: $c--text;
+
+      i {
+        margin-bottom: 1rem;
+        color: $c--success;
+        font-size: 4rem;
+      }
+
+      .loading-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+    }
+
+  }
+}
+
+
+.confirm-free-ticket-popup {
+  max-width: 460px;
+  width: 100%;
+  background-color: $c--base;
+  display: flex;
+  flex-direction: column;
+
+
+  .steps-slider {
+    background-color: $c--base;
+    overflow-x: hidden;
+    padding: 1.5rem 2rem;
+    width: 100%;
+
+    @media (max-width: map-get($breakpoints, 'small')) {
+      padding: 1.5rem 1rem;
+    }
+
+    .track {
+      $gap: 4rem;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: $gap;
+      position: relative;
+      transition: 0.3s;
+      left: 0;
+
+      > * {
+        flex: 1 0 100%;
+      }
+
+      &[data-step="1"] {
+        left: 0;
+      }
+
+      &[data-step="2"] {
+        left: calc(-100% - $gap);
+      }
+
+      &[data-step="3"] {
+        left: calc(-200% - ($gap * 2));
+      }
+    }
+
+    .confirm-step{
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .success {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: .5rem;
+      color: $c--text;
+
+      i {
+        margin-bottom: 1rem;
+        color: $c--success;
+        font-size: 4rem;
+      }
+
+      .loading-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .error {
+    color: $c--muted;
+  }
+
+  .actions {
+    justify-content: flex-end;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
