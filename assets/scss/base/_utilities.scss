@@ -1,37 +1,108 @@
 .flex {
-    display: flex;
-    flex-wrap: nowrap;
-    &.stack {
-        flex-direction: column;
-    }
-    &.center {
-        align-items: center;
-        justify-content: center;
-    }
-    &.justify-between {
-        justify-content: space-between;
-    }
-    .wrap {
-        flex-wrap: wrap;
-    }
-}
-.my-auto {
-    margin-block: auto;
-}
-.mt-auto {
-    margin-top: auto;
-}
-.mb-auto {
-    margin-bottom: auto;
-}
-.decoration-none {
-    text-decoration: none !important;
-}
-.capitalize {
-    text-transform: capitalize;
-}
-.mobile-hidden{
-    @media (max-width: map-get($breakpoints, 'medium')) {
-        display: none!important;
-    }
+  display: flex;
+  flex-wrap: nowrap;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.end {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  &.start {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &.end-start {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  &.start-end {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  &.center-start {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &.start-center {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &.center-end {
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &.end-center {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  // Justify-content options
+  &.justify-start {
+    justify-content: flex-start;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.justify-around {
+    justify-content: space-around;
+  }
+
+  &.justify-evenly {
+    justify-content: space-evenly;
+  }
+
+  // Align-items options
+  &.align-start {
+    align-items: flex-start;
+  }
+
+  &.align-end {
+    align-items: flex-end;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.align-baseline {
+    align-items: baseline;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.column-reverse{
+    flex-direction: column-reverse;
+  }
+
+
+  &.row-reverse{
+    flex-direction: row-reverse;
+  }
 }

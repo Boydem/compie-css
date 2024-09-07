@@ -30,12 +30,12 @@
     </header>
 
     <div class="view">
-        <div class="positioning container">
+        <div class="inner-view container">
             <h1>Positioning</h1>
             <div class="examples">
                 <section class="example sticky">
                     <div class="wrapper">
-                        <div class="sidebar">
+                        <div class="example-sidebar">
                             <h5>Example</h5>
                             <ul>
                                 <li>
@@ -69,7 +69,7 @@
 &lt;!-- HTML --&gt;
 &lt;section class="sticky-parent"&gt;
     &lt;div class="wrapper"&gt;
-        &lt;div class="sidebar"&gt;
+        &lt;div class="example-sidebar"&gt;
             &lt;h5&gt;Sidebar&lt;/h5&gt;
             &lt;ul&gt;
                 &lt;li&gt;&lt;a&gt;Link 1&lt;/a&gt;&lt;/li&gt;
@@ -93,10 +93,10 @@
     gap: 1.5rem;
   }
 
-  .sidebar {
+  .example-sidebar {
     position: sticky;
     top: 1rem; /* Adjust this value based on your header height or desired offset */
-    flex: 0 0 300px; /* Flex-basis for the sidebar width */
+    flex: 0 0 300px; /* Flex-basis for the example-sidebar width */
   }
 
   .content {
@@ -109,7 +109,7 @@
                 </section>
                 <section class="example">
                     <div class="wrapper">
-                        <div class="sidebar">
+                        <div class="example-sidebar">
                             <h5>Example</h5>
                             <ul>
                                 <li>
@@ -157,7 +157,7 @@
                 </section>
                 <section class="example">
                     <div class="wrapper">
-                        <div class="sidebar">
+                        <div class="example-sidebar">
                             <h5>Example</h5>
                             <ul>
                                 <li>

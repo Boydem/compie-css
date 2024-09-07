@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34c1eaf3-2a8e-4274-af3a-bd878bffda46" name="Changes" comment="" />
+    <list default="true" id="34c1eaf3-2a8e-4274-af3a-bd878bffda46" name="Changes" comment="added gitignore">
+      <change afterPath="$PROJECT_DIR$/assets/scss/views/_home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scss/views/_inner-view.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/base/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/examples/_flex.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/views/_flex.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/examples/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/views/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/examples/_positioning.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/views/_positioning.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/flex.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/flex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/positioning.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/positioning.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +35,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\xampp\php\php.exe" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -29,19 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Noam/Desktop/css/assets/scss/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "liveEdit",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Noam/Desktop/css/assets/scss/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;liveEdit&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Noam\Desktop\css\assets\scss\components" />
@@ -74,11 +93,26 @@
       <updated>1725521509580</updated>
       <workItem from="1725521510565" duration="687000" />
       <workItem from="1725522236323" duration="18779000" />
+      <workItem from="1725546335155" duration="1134000" />
+      <workItem from="1725604999100" duration="7027000" />
     </task>
+    <task id="LOCAL-00001" summary="added gitignore">
+      <option name="closed" value="true" />
+      <created>1725546450445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725546450445</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="added gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

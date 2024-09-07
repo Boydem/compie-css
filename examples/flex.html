@@ -32,10 +32,338 @@
     </header>
 
     <div class="view">
-        <div class="content container">
-
+        <div class="inner-view flex-view container">
             <h1>Flex</h1>
+            <div class="examples">
+                <section class="example">
+                    <div class="wrapper">
+                        <div class="example-sidebar">
+                            <h5>Flex</h5>
+                            <ul>
+                                <li>
+                                    <a href="#intro">intro</a>
+                                </li>
+                                <li>
+                                    <a href="#flex-dir">flex-direction</a>
+                                </li>
+                                <li>
+                                    <a href="#align-items">align-items</a>
+                                </li>
+                                <li>
+                                    <a href="#justify-content">justify-content</a>
+                                </li>
+                                <li>
+                                    <a href="#flex-wrap">flex-wrap</a>
+                                </li>
+                                <li>
+                                    <a href="#flex">flex</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <section id="intro">
+                                <h3>When to use display:flex;</h3>
+                                <p>1. When we want to layout elements on one axis</p>
+                                <div class="example">
+                                    <div>
+                                        <h4>X - Horizontal</h4>
+                                        <div class="flex">
+                                            <div class="item"><h6>Child</h6></div>
+                                            <div class="item"><h6>Child</h6></div>
+                                            <div class="item"><h6>Child</h6></div>
+                                            <div class="item"><h6>Child</h6></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4>Y - Vertical</h4>
+                                        <div class="flex column">
+                                            <div class="item"><h6>Child</h6></div>
+                                            <div class="item"><h6>Child</h6></div>
+                                            <div class="item"><h6>Child</h6></div>
+                                            <div class="item"><h6>Child</h6></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>2. When we want to position a child element inside its parent element (on both
+                                    axis)</p>
+                                <div class="example">
+                                    <div class="intro-position">
+                                        <h4>Y,X:Center</h4>
+                                        <div class="item flex center"><h6>Child</h6></div>
+                                        <h4>Y,X:End</h4>
+                                        <div class="item flex end"><h6>Child</h6></div>
+                                        <h4>Y,X:Start</h4>
+                                        <div class="item flex start"><h6>Child</h6></div>
+                                        <h4>Y:Center-X:End</h4>
+                                        <div class="item flex center-end"><h6>Child</h6></div>
+                                        <h4>Y:Center-X:Start</h4>
+                                        <div class="item flex center-start"><h6>Child</h6></div>
+                                        <h4>Y:End-X:Center</h4>
+                                        <div class="item flex end-center"><h6>Child</h6></div>
+                                        <h4>Y:Start-X:Center</h4>
+                                        <div class="item flex start-center"><h6>Child</h6></div>
+                                        <h4>Y:End-X:Start</h4>
+                                        <div class="item flex end-start"><h6>Child</h6></div>
+                                        <h4>Y:Start-X:End</h4>
+                                        <div class="item flex start-end"><h6>Child</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="flex-dir">
+                                <h3>flex-direction</h3>
+                                <p>The <code>flex-direction</code> property specifies the direction of the flex items along the main axis.</p>
 
+                                <div class="example">
+                                    <h4>flex-direction: row (default)</h4>
+                                    <p>This is the default value. Items are arranged in a row, from left to right.</p>
+                                    <div class="flex">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>flex-direction: row-reverse</h4>
+                                    <p>Items are arranged in a row but in reverse order, from right to left.</p>
+                                    <div class="flex row-reverse">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>flex-direction: column</h4>
+                                    <p>Items are arranged in a column, from top to bottom.</p>
+                                    <div class="flex column">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>flex-direction: column-reverse</h4>
+                                    <p>Items are arranged in a column but in reverse order, from bottom to top.</p>
+                                    <div class="flex column-reverse">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="align-items">
+                                <h3>align-items</h3>
+                                <p>The <code>align-items</code> property aligns flex items along the cross axis of the container.</p>
+
+                                <div class="example">
+                                    <h4>align-items: stretch (default)</h4>
+                                    <div class="flex">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                    <div class="flex column">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>align-items: flex-start</h4>
+                                    <code>flex-direction: row;</code>
+                                    <div class="flex align-start">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                    <code>flex-direction: column;</code>
+                                    <div class="flex column align-start">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>align-items: flex-end</h4>
+                                    <code>flex-direction: row;</code>
+                                    <div class="flex align-end">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                    <code>flex-direction: column;</code>
+                                    <div class="flex column align-end">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>align-items: center</h4>
+                                    <code>flex-direction: row;</code>
+                                    <div class="flex align-center">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                    <code>flex-direction: column;</code>
+                                    <div class="flex column align-center">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="justify-content">
+                                <h3>justify-content</h3>
+                                <p>The <code>justify-content</code> property aligns flex items along the main axis of the container.</p>
+
+                                <div class="example">
+                                    <h4>justify-content: flex-start (default)</h4>
+                                    <div class="flex justify-start">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>justify-content: flex-end</h4>
+                                    <div class="flex justify-end">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>justify-content: center</h4>
+                                    <div class="flex justify-center">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>justify-content: space-between</h4>
+                                    <div class="flex justify-between">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>justify-content: space-around</h4>
+                                    <div class="flex justify-around">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>justify-content: space-evenly</h4>
+                                    <div class="flex justify-evenly">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="flex-wrap">
+                                <h3>flex-wrap</h3>
+                                <p>The <code>flex-wrap</code> property controls whether the flex container's items are forced into a single line or can wrap onto multiple lines.</p>
+
+                                <div class="example no-wrap">
+                                    <h4>flex-wrap: nowrap (default)</h4>
+                                    <p>Items are placed in a single line and will not wrap, even if they overflow the container.</p>
+                                    <div class="flex nowrap">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                        <div class="item"><h6>Child 5</h6></div>
+                                        <div class="item"><h6>Child 6</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example wrap">
+                                    <h4>flex-wrap: wrap</h4>
+                                    <p>Items wrap onto multiple lines when necessary.</p>
+                                    <div class="flex wrap">
+                                        <div class="item"><h6>Child 1</h6></div>
+                                        <div class="item"><h6>Child 2</h6></div>
+                                        <div class="item"><h6>Child 3</h6></div>
+                                        <div class="item"><h6>Child 4</h6></div>
+                                        <div class="item"><h6>Child 5</h6></div>
+                                        <div class="item"><h6>Child 6</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="flex">
+                                <h3>flex: (grow) (shrink) (basis);</h3>
+                                <p>The <code>flex</code> property is a shorthand for <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>. It defines how a flex item will grow or shrink to fit the space available in its flex container.</p>
+
+                                <div class="example">
+                                    <h4>flex: 1 (flex-grow: 1, flex-shrink: 1, flex-basis: 0%)</h4>
+                                    <p>All items will grow and shrink equally to fill the container.</p>
+                                    <div class="flex">
+                                        <div class="item" style="flex: 1;"><h6>Child 1</h6></div>
+                                        <div class="item" style="flex: 1;"><h6>Child 2</h6></div>
+                                        <div class="item" style="flex: 1;"><h6>Child 3</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>flex: 2 1 auto (flex-grow: 2, flex-shrink: 1, flex-basis: auto)</h4>
+                                    <p>The second item will grow twice as much as the others.</p>
+                                    <div class="flex">
+                                        <div class="item" style="flex: 1 1 auto;"><h6>Child 1</h6></div>
+                                        <div class="item" style="flex: 2 1 auto;"><h6>Child 2</h6></div>
+                                        <div class="item" style="flex: 1 1 auto;"><h6>Child 3</h6></div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <h4>flex: 0 0 200px (flex-grow: 0, flex-shrink: 0, flex-basis: 200px)</h4>
+                                    <p>Items have a fixed width and won't grow or shrink.</p>
+                                    <div class="flex wrap">
+                                        <div class="item" style="flex: 0 0 200px;"><h6>Child 1</h6></div>
+                                        <div class="item" style="flex: 0 0 200px;"><h6>Child 2</h6></div>
+                                        <div class="item" style="flex: 0 0 200px;"><h6>Child 3</h6></div>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </main>

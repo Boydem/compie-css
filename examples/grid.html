@@ -13,9 +13,7 @@
 </head>
 <body>
 
-
 <main id="app">
-
     <header class="site-header container">
         <img src="../assets/images/compie.svg" alt="logo" class="logo">
         <input type="checkbox" name="isMobileNavOpen" id="isMobileNavOpen" hidden/>
@@ -30,14 +28,131 @@
             </div>
         </nav>
     </header>
+
     <div class="view">
-        <div class="content container">
-
+        <div class="inner-view grid-view container">
             <h1>Grid</h1>
-
+            <div class="examples">
+                <section class="example">
+                    <div class="wrapper">
+                        <div class="sidebar">
+                            <h5>Grid</h5>
+                            <ul>
+                                <li><a href="#intro">Intro</a></li>
+                                <li><a href="#grid-template">grid-template</a></li>
+                                <li><a href="#grid-gap">grid-gap</a></li>
+                                <li><a href="#grid-areas">grid-areas</a></li>
+                                <li><a href="#grid-alignment">Grid Alignment</a></li>
+                                <li><a href="#responsive-grid">Responsive Grid</a></li>
+                            </ul>
+                        </div>
+                        <div class="content">
+                            <section id="intro">
+                                <h3>When to use display: grid;</h3>
+                                <p>1. When we want to create two-dimensional layouts</p>
+                                <div class="example">
+                                    <div class="grid-container">
+                                        <div class="item"><h6>1</h6></div>
+                                        <div class="item"><h6>2</h6></div>
+                                        <div class="item"><h6>3</h6></div>
+                                        <div class="item"><h6>4</h6></div>
+                                        <div class="item"><h6>5</h6></div>
+                                        <div class="item"><h6>6</h6></div>
+                                    </div>
+                                </div>
+                                <p>2. When we want to create complex layouts with precise control</p>
+                                <div class="example">
+                                    <div class="complex-grid">
+                                        <div class="item header"><h6>Header</h6></div>
+                                        <div class="item sidebar"><h6>Sidebar</h6></div>
+                                        <div class="item main"><h6>Main Content</h6></div>
+                                        <div class="item footer"><h6>Footer</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section id="grid-template">
+                                <h3>grid-template-columns and grid-template-rows</h3>
+                                <p>These properties define the columns and rows of the grid.</p>
+                                <div class="example">
+                                    <h4>3x3 Grid</h4>
+                                    <div class="grid-3x3">
+                                        <div class="item"><h6>1</h6></div>
+                                        <div class="item"><h6>2</h6></div>
+                                        <div class="item"><h6>3</h6></div>
+                                        <div class="item"><h6>4</h6></div>
+                                        <div class="item"><h6>5</h6></div>
+                                        <div class="item"><h6>6</h6></div>
+                                        <div class="item"><h6>7</h6></div>
+                                        <div class="item"><h6>8</h6></div>
+                                        <div class="item"><h6>9</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section id="grid-gap">
+                                <h3>grid-gap</h3>
+                                <p>This property sets the gaps (gutters) between rows and columns.</p>
+                                <div class="example">
+                                    <h4>Grid with gap</h4>
+                                    <div class="grid-with-gap">
+                                        <div class="item"><h6>1</h6></div>
+                                        <div class="item"><h6>2</h6></div>
+                                        <div class="item"><h6>3</h6></div>
+                                        <div class="item"><h6>4</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section id="grid-areas">
+                                <h3>grid-template-areas</h3>
+                                <p>This property defines named grid areas.</p>
+                                <div class="example">
+                                    <h4>Layout using grid areas</h4>
+                                    <div class="grid-areas-layout">
+                                        <div class="item header"><h6>Header</h6></div>
+                                        <div class="item sidebar"><h6>Sidebar</h6></div>
+                                        <div class="item main"><h6>Main</h6></div>
+                                        <div class="item footer"><h6>Footer</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section id="grid-alignment">
+                                <h3>Grid Alignment</h3>
+                                <p>Aligning grid items within their cells.</p>
+                                <div class="example">
+                                    <h4>justify-items and align-items</h4>
+                                    <div class="grid-alignment">
+                                        <div class="item"><h6>1</h6></div>
+                                        <div class="item"><h6>2</h6></div>
+                                        <div class="item"><h6>3</h6></div>
+                                        <div class="item"><h6>4</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section id="responsive-grid">
+                                <h3>Responsive Grid</h3>
+                                <p>Creating a responsive grid layout using minmax() and auto-fit.</p>
+                                <div class="example">
+                                    <h4>Responsive grid</h4>
+                                    <div class="responsive-grid">
+                                        <div class="item"><h6>1</h6></div>
+                                        <div class="item"><h6>2</h6></div>
+                                        <div class="item"><h6>3</h6></div>
+                                        <div class="item"><h6>4</h6></div>
+                                        <div class="item"><h6>5</h6></div>
+                                        <div class="item"><h6>6</h6></div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
-
 </main>
 
 <script src="../assets/js/header.js"></script>

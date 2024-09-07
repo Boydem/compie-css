@@ -1,0 +1,74 @@
+.flex-view {
+  .examples .example {
+    min-height: unset;
+  }
+
+  .content > section:not(:last-child) {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $c--border;
+    margin-bottom: 0.75rem;
+  }
+
+  .content > section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .item {
+    padding: 1rem;
+    background-color: $c--disabled;
+    border-radius: 0.5rem;
+  }
+
+  .intro-position {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .item {
+      min-height: 200px;
+    }
+  }
+
+  #align-items {
+
+    .example {
+      gap: 1rem;
+      .flex {
+        border-radius: 0.85rem;
+        border: 1px solid $c--border;
+        min-height: 200px;
+      }
+    }
+  }
+
+  #flex-wrap{
+    .example {
+      .flex {
+        border: 1px solid $c--border;
+        border-radius: 0.85rem;
+        min-height: 200px;
+      }
+
+      .wrap {
+        flex-wrap: wrap;
+      }
+
+      .item {
+        flex: 0 0 calc(33.333% - 1rem);
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+  }
+
+  .flex {
+    padding: 1rem;
+    gap: 1rem;
+    position: relative;
+  }
+}

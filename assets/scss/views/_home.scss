@@ -1,0 +1,20 @@
+.home {
+  padding-block: 5rem;
+
+  h1 {
+    text-align: center;
+  }
+
+  .positioning-playground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .box {
+      border: 1px solid $c--border;
+      padding: 1rem;
+      border-radius: .85rem;
+    }
+  }
+}

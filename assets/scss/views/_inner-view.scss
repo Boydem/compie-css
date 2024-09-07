@@ -1,8 +1,27 @@
-.positioning {
+.inner-view {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   height: 100%;
+
+  .content > section:not(:last-child) {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $c--border;
+    margin-bottom: 0.75rem;
+  }
+
+  .content > section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .item {
+    padding: 1rem;
+    background-color: $c--disabled;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
 
   h1 {
     text-align: center;
@@ -23,13 +42,12 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      min-height: calc(100vh - var(--header-height) - 1rem);
+      // min-height: calc(100vh - var(--header-height) - 1rem);
 
       .wrapper {
         flex: 1 1;
         display: flex;
         align-items: flex-start;
-        flex-wrap: wrap;
         gap: 1.5rem;
 
         .sidebar {
@@ -39,6 +57,9 @@
           display: flex;
           flex-direction: column;
           gap: 1rem;
+          @media (max-width: map-get($breakpoints, 'medium')) {
+            display: none;
+          }
 
           ul {
             display: flex;
@@ -57,6 +78,7 @@
         display: flex;
         flex-direction: column;
         gap: .75rem;
+        background-color: $c--base;
 
         p {
           max-width: 400px;
@@ -66,6 +88,8 @@
     }
 
   }
+
+
 }
 
 pre {
