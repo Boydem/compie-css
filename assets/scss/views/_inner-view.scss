@@ -50,7 +50,7 @@
         align-items: flex-start;
         gap: 1.5rem;
 
-        .sidebar {
+        .example-sidebar {
           position: sticky;
           top: calc(var(--header-height) + 1rem);
           flex: 0 0 300px;

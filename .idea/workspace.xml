@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34c1eaf3-2a8e-4274-af3a-bd878bffda46" name="Changes" comment="added gitignore">
-      <change afterPath="$PROJECT_DIR$/assets/scss/views/_home.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/views/_inner-view.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/base/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/examples/_flex.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/views/_flex.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/examples/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/views/_grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/examples/_positioning.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/views/_positioning.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/flex.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/flex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/positioning.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/positioning.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/base/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/layout/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/layout/_layout.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +85,8 @@
       <workItem from="1725522236323" duration="18779000" />
       <workItem from="1725546335155" duration="1134000" />
       <workItem from="1725604999100" duration="7027000" />
+      <workItem from="1725737266617" duration="743000" />
+      <workItem from="1725782125490" duration="199000" />
     </task>
     <task id="LOCAL-00001" summary="added gitignore">
       <option name="closed" value="true" />
@@ -104,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725546450445</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added gitignore">
+      <option name="closed" value="true" />
+      <created>1725737275730</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725737275730</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

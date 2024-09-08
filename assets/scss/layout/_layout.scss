@@ -6,9 +6,10 @@
   .view {
     flex: 1;
   }
+
+  .container {
+    padding-inline: var(--layout-padding);
+    transition: 0.3s;
+  }
 }
 
-.container {
-  padding-inline: var(--layout-padding);
-  transition: 0.3s;
-}
